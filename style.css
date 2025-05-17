@@ -1,0 +1,6 @@
+#calculator {
+    display: flex;
+    border: 1px solid black;
+    width: 400px;
+    height: 600px;
+}
