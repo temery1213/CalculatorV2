@@ -1,6 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    
+    background-color: rgb(0, 0, 0);
+    font-family: 'Cyberpunk is not dead', sans-serif;
+    color: #00e1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 #calculator {
     display: flex;
-    border: 1px solid black;
-    width: 400px;
-    height: 600px;
+    border: 2px solid #000000;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    background-color: #ffee00;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 3px;
 }
+
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+    border: 2px solid #050505;
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #ffee00;
+    font-size: xx-large;
+    border-radius: 3px;
+    padding: auto;
+    color: #050505;
+    
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cyberpunk is not dead', sans-serif;
+    color: #00e1ff;
+    margin: 0;
+    text-shadow: 3px 3px 4px rgba(247, 3, 117, 0.5);
+    padding-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+button {
+    
+    flex-wrap: wrap;
+    height: 50px;
+    width: 50px;
+    font-size: 15px; 
+    background-color: #000000; 
+    color: #00e1ff; 
+    padding: 10px 20px;
+    border: none; 
+    cursor: pointer; 
+    font-family: 'Cyberpunk is not dead', sans-serif;
+     border-radius: 10px;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+ }
+   
+ button:hover {
+     background-color: #00e1ff;
+     color: #000000;
+ }
+
+ #add, #subtract, #multiply, #divide, #decimal  {
+    color: #ff7300;
+    
+}
+
+#equals {
+    color: rgb(255, 255, 255);
+    
+}
+
