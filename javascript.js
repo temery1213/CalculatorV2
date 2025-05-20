@@ -1,4 +1,5 @@
 const userInput = document.getElementById('userInput');
+const result = document.getElementById('result');
 
 const zero = document.getElementById("zero");
 const one = document.getElementById("one");
@@ -65,4 +66,15 @@ function operation(operator) {
 
 
 
+    document.getElementById('clear').addEventListener('click', function(){
+        userInput.textContent = '';
+        result.textContent = '';
+        currentInput = '';
+    });
+    
   
+  
+    document.getElementById('backSpace').addEventListener("click", function() {
+        userInput.textContent = userInput.textContent.slice(0, -1);
+        currentInput = currentInput.slice(0, -1);
+});
