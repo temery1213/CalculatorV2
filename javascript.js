@@ -103,6 +103,11 @@ operatorButtons.forEach(button => {
         if (currentInput === '' && numbers.length === 0) {
             return;
         }
+        const lastChar = userInput.textContent.trim().slice(-1);
+        if (['+', '-', '*', '/'].includes(lastChar)) { 
+            return 
+        }
+
         if (lastWasEquals) {
 
             numbers = [Number(currentInput)];
