@@ -106,7 +106,7 @@ body {
 }
 
 #memoryLog::-webkit-scrollbar-track {
-    background: #ffee00; /* scrollbar track matches memory box background */
+    background: #ffee00;
     border-radius: 10px;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 #memoryLog::-webkit-scrollbar-thumb:hover {
-    background: #00ffff; /* slightly brighter on hover */
+    background: #00ffff; 
 }
 
 #container {
@@ -144,19 +144,22 @@ body {
 }
 
 button {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     height: 50px;
     width: 50px;
     font-size: 15px; 
     background-color: #000000; 
     color: #00e1ff; 
-    padding: 10px 20px;
     border: none; 
     cursor: pointer; 
     font-family: 'Cyberpunk is not dead', sans-serif;
      border-radius: 10px;
      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+     text-align: center;
+     
     
  }
    
@@ -167,8 +170,10 @@ button {
 
  #add, #subtract, #multiply, #divide, #decimal  {
     color: #ff7300;
+    font-size: 30px;
     
 }
+
 
 #equals {
     color: rgb(255, 255, 255);
