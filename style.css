@@ -56,6 +56,7 @@ body {
 #memory {
     position: relative;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
@@ -70,10 +71,14 @@ body {
 }
 
 #memoryLog {
-    flex-grow: 1;
+    flex: 1;
     overflow-y: auto;
     padding-right: 5px;
-    margin-bottom: 40px; 
+    padding-left: 5px;
+    margin-bottom: 10px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
 }
 
 #memoryWipe {
@@ -94,6 +99,24 @@ body {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+#memoryLog::-webkit-scrollbar {
+    width: 8px;
+}
+
+#memoryLog::-webkit-scrollbar-track {
+    background: #ffee00; /* scrollbar track matches memory box background */
+    border-radius: 10px;
+}
+
+#memoryLog::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00e1ff, #00bfff);
+    border-radius: 10px;
+}
+
+#memoryLog::-webkit-scrollbar-thumb:hover {
+    background: #00ffff; /* slightly brighter on hover */
 }
 
 #container {
