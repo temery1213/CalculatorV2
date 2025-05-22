@@ -26,6 +26,8 @@ const numberButtons = document.querySelectorAll(".numberButton");
 const operatorButtons = document.querySelectorAll('.operatorButton');
 const negativePositive = document.getElementById('negativePositive')
 
+const memoryWipe = document.getElementById('memoryWipe');
+
 let currentInput = '';
 let numbers = [];
 let operators = [];
@@ -77,9 +79,11 @@ equalsButton.addEventListener('click', () => {
         fullExpression += currentInput;
 
         let memoryEntry = `${fullExpression} = ${res}`;
+
+        const memoryLog = document.getElementById('memoryLog')
         const p = document.createElement('p');
         p.textContent = memoryEntry;
-        memory.appendChild(p);
+        memoryLog.appendChild(p);
 
         currentInput = res.toString();
         numbers = [];
@@ -96,6 +100,8 @@ equalsButton.addEventListener('click', () => {
     }
 });
 ///
+
+
 
 /// Operator buttons
 operatorButtons.forEach(button => {
@@ -149,9 +155,6 @@ operatorButtons.forEach(button => {
     });
  
 ///
-
-
-
 
 ///clear and reset///
     document.getElementById('clear').addEventListener('click', function(){
@@ -270,3 +273,7 @@ function evaluateExpression(numbers, operators) {
     return expression[0];
 }
 ///
+
+memoryWipe.addEventListener("click", function(){
+    memoryLog.textContent = '';
+    });
